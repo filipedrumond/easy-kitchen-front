@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare" : "npm i json-server -g --save",
+    "db" : "json-server --watch db/db.json --port 8015",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
@@ -15,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "json-server": "^0.15.0",
     "laravel-mix": "^4.1.2",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.22.10",
