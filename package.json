@@ -18,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "js-md5": "^0.7.3",
     "json-server": "^0.15.0",
     "laravel-mix": "^4.1.2",
     "resolve-url-loader": "^3.1.0",
@@ -26,7 +28,9 @@
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
     "vue-resource": "^1.5.1",
-    "vue-router": "^3.1.2"
+    "vue-router": "^3.1.2",
+    "vue-session": "^1.0.0",
+    "vue-style-loader": "^4.1.2"
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
