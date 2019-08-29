@@ -1,3 +1,10 @@
-body{
-    background-color: red;
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,500,600,700');
+
+@import "variables";
+@import "bootstrap";
+
+.debug{
+    background-color: purple;
+    color: white;
+    font-size: 2rem;
 }

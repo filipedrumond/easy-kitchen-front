@@ -1,0 +1,365 @@
+// Colors
+//
+
+$white:    #fff;
+$gray-100: #f5f5f5;
+$gray-200: #e9e9e9;
+$gray-300: #dedede;
+$gray-400: #cecece;
+$gray-500: #adadad;
+$gray-600: #656565;
+$gray-700: #494949;
+$gray-800: #333333;
+$gray-900: #222222;
+$black:    #000;
+
+$grays: ();
+$grays: map-merge(
+(
+"100": $gray-100,
+"200": $gray-200,
+"300": $gray-300,
+"400": $gray-400,
+"500": $gray-500,
+"600": $gray-600,
+"700": $gray-700,
+"800": $gray-800,
+"900": $gray-900
+),
+$grays
+);
+
+$orange:   #ED9902;
+$orange-dark: #C86325;
+$yellow:   #F1D116;
+$teal:     #20c997;
+$green:    #28a745;
+$cyan:     #17a2b8;
+$blue:     #007bff;
+$indigo:   #6610f2;
+$purple:   #6f42c1;
+$pink:     #e83e8c;
+$red:      #A72712;
+$red-dark: #611E16;
+
+$colors: ();
+$colors: map-merge(
+(
+"laranja":    $orange,
+"amarelo":    $yellow,
+"cinza":      #7B7B7B,
+"orange":     $orange,
+"yellow":     $yellow,
+"teal":       $teal,
+"green":      $green,
+"cyan":       $cyan,
+"blue":       $blue,
+"indigo":     $indigo,
+"purple":     $purple,
+"pink":       $pink,
+"red":        $red,
+"red-dark":   $red-dark,
+"white":      $white,
+"gray":       $gray-600,
+"gray-dark":  $gray-800
+),
+$colors
+);
+
+$primary:       $orange;
+$secondary:     $yellow;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-200;
+$dark:          $gray-600;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+(
+"laranja":    $orange,
+"amarelo":    $yellow,
+"cinza":      #7B7B7B,
+"primary":    $primary,
+"secondary":  $secondary,
+"success":    $success,
+"info":       $info,
+"warning":    $warning,
+"danger":     $danger,
+"light":      $light,
+"white":      $white,
+"dark":       $dark,
+"nitro-home": $red-dark,
+"nitro":      $red,
+"turbo":      $orange,
+"basico":     $yellow,
+"simples":    $gray-500
+),
+$theme-colors
+);
+
+
+//
+// Base
+
+$body-bg:                   $white;
+$body-color:                $gray-600;
+
+$link-color:                $black;
+$link-decoration:           none;
+$link-hover-color:          darken($primary, 15%);
+$link-hover-decoration:     none;
+
+$paragraph-margin-bottom:   1rem;
+
+
+// Grid
+//
+
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+);
+
+$container-max-widths: (
+sm: 100%,
+md: 100%,
+lg: 100%,
+xl: 1180px
+);
+
+$grid-columns:                12;
+$grid-gutter-width:           20px;
+
+
+// Components
+//
+
+$border-width:                1px;
+$border-color:                $gray-200;
+
+$border-radius:               .12rem;
+$border-radius-lg:            .15rem;
+$border-radius-sm:            .10rem;
+
+//$component-active-color:      $white;
+//$component-active-bg:         theme-color("primary");
+
+$caret-width:                 .3em;
+
+$transition-base:             all .2s ease-in-out;
+$transition-fade:             opacity .15s linear;
+$transition-collapse:         height .35s ease;
+
+
+// Fonts
+//
+
+$font-family-sans-serif:      "Roboto", Arial, sans-serif, "Helvetica";
+$font-family-monospace:       "Courier New", Menlo, Monaco, Consolas, "Liberation Mono";
+$font-family-base:            $font-family-sans-serif;
+$font-size-base:              .85rem;
+$font-size-lg:                ($font-size-base * 1.2);
+$font-size-sm:                ($font-size-base * .85);
+$line-height-base:            1.5;
+
+$h1-font-size:                1.8rem;
+$h2-font-size:                1.5rem;
+$h3-font-size:                1.2rem;
+$h4-font-size:                1.1rem;
+$h5-font-size:                $font-size-base;
+$h6-font-size:                $font-size-sm;
+
+$font-weight-base:            400;
+$line-height-base:            1.4;
+
+$headings-margin-bottom:      .5rem;
+$headings-font-family:        'PT Sans', Helvetica Neue, Arial, Sans-serif;
+$headings-font-weight:        600;
+$headings-line-height:        1.2;
+$headings-color:              $gray-800;
+
+$display1-size:               5rem;
+$display2-size:               4.5rem;
+$display3-size:               3.5rem;
+$display4-size:               2.5rem;
+
+$lead-font-size:              ($font-size-base * 1.1);
+$small-font-size:             80%;
+
+$hr-border-color:             rgba($black, .1);
+$hr-border-width:             .2em;
+$hr-margin-y:                 1em;
+
+$dt-font-weight:              600;
+$list-inline-padding:         .5rem;
+
+$mark-padding:                .2em .4em;
+$mark-bg:                     lighten($primary, 40%);
+
+
+// Tables
+//
+
+$table-cell-padding:          .75rem;
+$table-caption-color:         $gray-500;
+
+
+// Buttons + Forms
+//
+
+$input-btn-padding-y:        .36rem;
+$input-btn-padding-x:         .8rem;
+
+$input-btn-focus-width:       .2rem;
+$input-btn-focus-color:       $gray-800;
+$input-btn-focus-box-shadow:  0;
+
+$input-btn-padding-y-sm:      .3rem;
+$input-btn-padding-x-sm:      .6rem;
+
+$input-btn-padding-y-lg:      .55rem;
+$input-btn-padding-x-lg:      1.2rem;
+
+$input-btn-border-width:      2px;
+
+$height-base: 2.2rem;
+$height-sm:   1.9rem;
+$height-lg:   2.8rem;
+
+
+// Buttons
+//
+
+$btn-font-weight:             600;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .1), 0 1px 1px rgba($black, .07);
+$btn-active-box-shadow:       inset 0 2px 4px rgba($black, .12);
+
+
+//
+// Forms
+
+$label-margin-bottom:                   .5rem;
+
+$input-bg:                              $white;
+$input-disabled-bg:                     $gray-200;
+
+$input-padding-y-sm:                    $input-btn-padding-y-sm;
+$input-padding-x-sm:                    $input-btn-padding-x-sm;
+
+$input-padding-y-lg:                    $input-btn-padding-y-lg;
+$input-padding-x-lg:                    $input-btn-padding-x;
+
+$input-color:                           $gray-700;
+$input-border-color:                    $gray-400;
+$input-border-width:                    1px;
+$input-box-shadow:                      inset 0 1px 1px rgba($black, .075);
+
+$input-border-radius:                   $border-radius;
+$input-border-radius-lg:                $border-radius-lg;
+$input-border-radius-sm:                $border-radius-sm;
+
+$input-focus-bg:                        $input-bg;
+$input-focus-border-color:              $primary;
+$input-focus-color:                     $input-color;
+
+$input-placeholder-color:               $gray-600;
+$input-plaintext-color:                 $body-color;
+
+$input-height-border:                   $input-border-width * 2;
+
+$input-height:                          $height-base;
+$input-height-sm:                       $height-sm;
+$input-height-lg:                       $height-lg;
+
+$input-checkbox-size:                   1.25rem;
+$input-radio-dot-size:                  .5rem;
+
+$input-group-addon-color:               $input-color;
+$input-group-addon-bg:                  $gray-200;
+$input-group-addon-border-color:        $input-border-color;
+
+
+// Dropdowns
+//
+
+$dropdown-min-width:                12rem;
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   .2rem;
+$dropdown-bg:                       $white;
+$dropdown-border-color:             rgba($black, .15);
+$dropdown-border-radius:            $border-radius;
+$dropdown-border-width:             $border-width;
+$dropdown-divider-bg:               $gray-200;
+$dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175);
+
+$dropdown-link-color:               $gray-900;
+$dropdown-link-hover-color:         $white;
+$dropdown-link-hover-bg:            $primary;
+
+$dropdown-link-active-color:        $white;
+$dropdown-link-active-bg:           $primary;
+
+$dropdown-link-disabled-color:      $gray-600;
+
+$dropdown-item-padding-y:           .28rem;
+$dropdown-item-padding-x:           1rem;
+
+$dropdown-header-color:             $gray-600;
+
+
+// Icons
+//
+
+$icon-base-size: 16;
+$icon-sizes-x: 1, 2, 3, 4, 5, 6, 12;
+
+$icon-sizes-p-start: 12;
+$icon-sizes-p-max: 48;
+$icon-sizes-p-steps: 2;
+
+$types: 10;
+$type-width: 100;
+
+
+//
+// Pagination
+
+$pagination-padding-y: 0;
+$pagination-padding-x: 0;
+$pagination-color:#505050;
+$pagination-bg: #fff;
+$pagination-active-color: #fff;
+$pagination-active-bg: #707070;
+$pagination-active-border-color: #dadada;
+$pagination-disabled-color: #dadada;
+
+
+// Tooltips
+//
+
+$tooltip-font-size:   12px;
+$tooltip-color:       #fff;
+$tooltip-bg:          #000;
+$tooltip-padding-y:  .25rem;
+$tooltip-padding-x:  .6rem;
+$tooltip-margin:      3px;
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:                   0.75rem;
+$alert-padding-x:                   1.25rem;
+$alert-margin-bottom:               1rem;
+$alert-border-radius:               $border-radius;
+$alert-border-width:                $border-width;
+
+$alert-bg-level:                    -11;
+$alert-border-level:                -10;
+$alert-color-level:                   6;
