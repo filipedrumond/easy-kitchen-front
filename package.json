@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare" : "npm i json-server -g --save",
-    "db" : "json-server --watch db/db.json --port 8015",
+    "prepare": "npm i json-server -g --save",
+    "db": "json-server --watch db/db.json --port 8015",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run db\"",
     "watch-poll": "npm run watch -- --watch-poll",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
@@ -24,9 +25,11 @@
     "sass-loader": "^7.3.1",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
+    "vue-resource": "^1.5.1",
     "vue-router": "^3.1.2"
   },
   "devDependencies": {
+    "concurrently": "^4.1.2",
     "vue-template-compiler": "^2.6.10"
   }
 }
