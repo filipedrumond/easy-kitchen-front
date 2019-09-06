@@ -18,13 +18,12 @@
 </template>
 
 <script>
-import { log } from "util";
 export default {
-    name: "HelloWorld",
+    name: "Login",
     data() {
         return {
             emailInput: "filipe.dp@outlook.com",
-            senhaInput: "123",
+            senhaInput: "1234",
             name: ""
         };
     },
@@ -49,17 +48,24 @@ export default {
                         });
                         return;
                     }
-                    this.$session.set("dadosUsuario", response.body);
-                    this.SimpleConfirms.success();
-                    console.log("Logado como:" + response.body.nome);
+                    this.$session.set("dadosUsuario", response.body[0]);
+                    //this.SimpleAlerts.success({title:"LOGADO",text:`Logado como: ${response.body[0].nome}`});
+                    window.location.replace(this.defaultPath);
                 },
                 response => {
-                    this.SimpleAlerts.error();
+                    this.SimpleAlerts.error({title:"O BANCO MORREU"});
                 }
             );
         }
+    },
+    created(){
+        if(this.$session.id()){
+            window.location.replace(this.defaultPath);
+        }
     }
+
 };
+
 </script>
 
 <style lang='scss'>

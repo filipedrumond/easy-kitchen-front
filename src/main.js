@@ -23,6 +23,7 @@ Vue.mixin({
     data: function () {
         return {
             db_url: "http://localhost:8015/",
+            defaultPath: "#/",
             SimpleAlerts: SimpleAlerts,
             SimpleConfirms: SimpleConfirms,
         }
