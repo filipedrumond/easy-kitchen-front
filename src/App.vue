@@ -6,12 +6,12 @@
 
 <script>
 export default {
-    name: "App",
-    beforeCreated() {
-        this.$session.start();
-    }
+    name: "App"
 };
 </script>
 
 <style lang="scss">
+* {
+    font-family: "Roboto", sans-serif;
+}
 </style>

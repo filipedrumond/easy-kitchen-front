@@ -2,11 +2,6 @@
 
 @import "variables";
 @import "bootstrap";
+@import "themes/all";
 @import "~@filipedp/simple_dialog/scss/alerts";
 @import "~@filipedp/simple_dialog/scss/confirms";
-
-.debug{
-    background-color: purple;
-    color: white;
-    font-size: 2rem;
-}

@@ -1,18 +1,29 @@
 <template>
-    <div class="login">
-        <div class="teste">
-            <input type="text" v-model="emailInput" />
-            <input type="text" v-model="senhaInput" />
-            <button class="btn btn-success" @click="btnLogin()">FFF</button>
-        </div>
-        <div class="debug">
-            DEBUG :
-            {{ emailInput }}
-            {{ senhaInput }}
-        </div>
-        <br />
-        <div class="debug">
-            {{}}
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-3">
+                <div class="form-group">
+                    <label class="" for="email">Email</label>
+                    <input
+                        class="form-control"
+                        id="email"
+                        type="text"
+                        v-model="emailInput"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="" for="senha">Senha</label>
+                    <input
+                        class="form-control"
+                        id="senha"
+                        type="text"
+                        v-model="senhaInput"
+                    />
+                </div>
+                <button class="btn btn-block btn-success" @click="btnLogin()">
+                    Entrar
+                </button>
+            </div>
         </div>
     </div>
 </template>
@@ -22,9 +33,9 @@ export default {
     name: "Login",
     data() {
         return {
-            emailInput: "filipe.dp@outlook.com",
-            senhaInput: "1234",
-            name: ""
+            emailInput: "",
+            senhaInput: "",
+            autoFill: true
         };
     },
     methods: {
@@ -56,7 +67,12 @@ export default {
             );
         }
     },
-    created() {}
+    created() {
+        if (this.autoFill) {
+            this.emailInput = "filipe.dp@outlook.com";
+            this.senhaInput = "1234";
+        }
+    }
 };
 </script>
 
