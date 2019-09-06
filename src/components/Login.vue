@@ -61,9 +61,4 @@ export default {
 </script>
 
 <style lang='scss'>
-.login {
-    .teste {
-        border-color: 2cm;
-    }
-}
 </style>
