@@ -1,17 +1,17 @@
 import Vue from 'vue'
-import App from './App'
-import router from './router'
 import VueResource from 'vue-resource';
-import VueSession from 'vue-session'
 import VueStyleLoader from 'vue-style-loader'
 import { SimpleAlerts } from "@filipedp/simple_dialog";
 import { SimpleConfirms } from "@filipedp/simple_dialog";
-
-
-
+import VueSession from 'vue-session'
+import router from './router'
+import App from './App'
 Vue.use(VueSession)
+
+
 Vue.use(VueResource);
 Vue.use(VueStyleLoader);
+
 Vue.config.productionTip = false;
 
 window.SimpleAlerts = SimpleAlerts;

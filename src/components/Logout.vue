@@ -1,20 +1,17 @@
 <template>
-    <div class="logout">
-    </div>
+    <div class="logout"></div>
 </template>
 
 <script>
 export default {
-    name: "Logout",
+    name: "logout",
     data() {
         return {};
     },
-    created(){
-        if(this.$session.id()){
-            this.$session.destroy();
-        }
-        window.location.replace(this.defaultPath);
-    },
+    created: function() {
+        this.$session.destroy();
+        this.$router.push({ path: "home" });
+    }
 };
 </script>
 

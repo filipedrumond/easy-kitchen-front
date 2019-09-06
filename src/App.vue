@@ -6,7 +6,10 @@
 
 <script>
 export default {
-    name: "App"
+    name: "App",
+    beforeCreated() {
+        this.$session.start();
+    }
 };
 </script>
 

@@ -12,7 +12,7 @@
         </div>
         <br />
         <div class="debug">
-            {{ $session.getAll() }}
+            {{}}
         </div>
     </div>
 </template>
@@ -34,7 +34,6 @@ export default {
                 this.senhaInput,
                 function() {}
             );
-            console.log(response);
         },
         reqLogin: function(usuario, senha) {
             let url = `${this.db_url}usuarios?email=${usuario}&senha=${senha}`;
@@ -48,24 +47,17 @@ export default {
                         });
                         return;
                     }
+                    console.log(response.body[0]);
                     this.$session.set("dadosUsuario", response.body[0]);
-                    //this.SimpleAlerts.success({title:"LOGADO",text:`Logado como: ${response.body[0].nome}`});
-                    window.location.replace(this.defaultPath);
                 },
                 response => {
-                    this.SimpleAlerts.error({title:"O BANCO MORREU"});
+                    this.SimpleAlerts.error({ title: "O BANCO MORREU" });
                 }
             );
         }
     },
-    created(){
-        if(this.$session.id()){
-            window.location.replace(this.defaultPath);
-        }
-    }
-
+    created() {}
 };
-
 </script>
 
 <style lang='scss'>

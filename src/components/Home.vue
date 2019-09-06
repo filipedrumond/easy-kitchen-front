@@ -1,6 +1,9 @@
 <template>
     <div class="home">
-        BEM VINDO {{$session.get("dadosUsuario").nome}}
+        BEM VINDO {{ usuario }}
+        <br />
+        {{ $session.get("dadosUsuario") }}
+        <H1>HOME</H1>
     </div>
 </template>
 
@@ -8,13 +11,13 @@
 export default {
     name: "Home",
     data() {
-        return {};
+        return {
+            usuario: ""
+        };
     },
-    created(){
-        if(!this.$session.id()){
-            window.location.replace(this.defaultPath+"login");
-        }
-    },
+    created: function() {
+        this.usuario = this.$session.get("dadosUsuario").nome;
+    }
 };
 </script>
 
