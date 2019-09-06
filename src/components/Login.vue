@@ -10,6 +10,10 @@
             {{ emailInput }}
             {{ senhaInput }}
         </div>
+        <br />
+        <div class="debug">
+            {{ $session.getAll() }}
+        </div>
     </div>
 </template>
 
@@ -20,25 +24,37 @@ export default {
     data() {
         return {
             emailInput: "filipe.dp@outlook.com",
-            senhaInput: "123"
+            senhaInput: "123",
+            name: ""
         };
     },
     methods: {
         btnLogin: function() {
-            this.reqLogin(this.emailInput, this.senhaInput);
+            let response = this.reqLogin(
+                this.emailInput,
+                this.senhaInput,
+                function() {}
+            );
+            console.log(response);
         },
         reqLogin: function(usuario, senha) {
             let url = `${this.db_url}usuarios?email=${usuario}&senha=${senha}`;
+            var VueXX = this;
             this.$http.get(url).then(
                 response => {
                     if (response.body.length !== 1) {
-                        alert("ERRO");
+                        this.SimpleAlerts.error({
+                            title: "Erro ao logar",
+                            text: "Usuario ou senha inválidos"
+                        });
                         return;
                     }
-                    this.$session.set(dadosUsuario, response.body);
+                    this.$session.set("dadosUsuario", response.body);
+                    this.SimpleConfirms.success();
+                    console.log("Logado como:" + response.body.nome);
                 },
                 response => {
-                    window.alert("ERRO");
+                    this.SimpleAlerts.error();
                 }
             );
         }
@@ -49,7 +65,7 @@ export default {
 <style lang='scss'>
 .login {
     .teste {
-        background-color: white;
+        border-color: 2cm;
     }
 }
 </style>

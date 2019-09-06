@@ -18,7 +18,13 @@
       "id": 1,
       "nome": "Filipe Dru",
       "email": "filipe.dp@outlook.com",
-      "senha": "123"
+      "senha": "1234"
+    },
+    {
+      "id": 1,
+      "nome": "Breno ara",
+      "email": "breno.dp@outlook.com",
+      "senha": "4321"
     }
   ]
 }
