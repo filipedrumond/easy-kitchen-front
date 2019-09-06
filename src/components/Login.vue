@@ -47,8 +47,8 @@ export default {
                         });
                         return;
                     }
-                    console.log(response.body[0]);
                     this.$session.set("dadosUsuario", response.body[0]);
+                    this.$router.push({ path: "/" });
                 },
                 response => {
                     this.SimpleAlerts.error({ title: "O BANCO MORREU" });

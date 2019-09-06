@@ -32,13 +32,13 @@ router.beforeEach((to, from, next) => {
     var isLogged = Vue.prototype.$session.exists("dadosUsuario");
     // console.log("AUTH >>" + authRequired);
     // console.log("ISLOGGED >>" + isLogged);
-    if (authRequired) {
-        if (!isLogged) {
-            // Vue.prototype.$route.push({ path: "login" });
-            next("/login");
-            return;
-        }
-        next();
+    if (authRequired && !isLogged) {
+        // Vue.prototype.$route.push({ path: "login" });
+        next("/login");
+        return;
+    }
+    if (to.path === "/login" && isLogged) {
+        next("/");
         return;
     }
     next();

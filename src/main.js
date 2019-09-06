@@ -6,18 +6,12 @@ import { SimpleConfirms } from "@filipedp/simple_dialog";
 import VueSession from 'vue-session'
 import router from './router'
 import App from './App'
-Vue.use(VueSession)
 
-
+Vue.use(VueSession);
 Vue.use(VueResource);
 Vue.use(VueStyleLoader);
 
 Vue.config.productionTip = false;
-
-window.SimpleAlerts = SimpleAlerts;
-window.SimpleConfirms = SimpleConfirms;
-
-
 /* global mixin */
 Vue.mixin({
     data: function () {
