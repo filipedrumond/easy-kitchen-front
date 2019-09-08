@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from '../components/Login'
 import Logout from '../components/Logout'
 import Home from '../components/Home'
+import ThemeTest from '../components/ThemeTest'
 Vue.use(Router);
 const router = new Router({
     // linkActiveClass: '-active',
@@ -24,7 +25,13 @@ const router = new Router({
             name: 'logout',
             alias: ['/Logout', '/exit', '/Exit'],
             component: Logout,
-        }
+        },
+        {
+            path: '/theme-test',
+            name: 'theme-test',
+            alias: ['/theme-test', '/themeTest', '/themetest', "/theme"],
+            component: ThemeTest,
+        },
     ],
 });
 router.beforeEach((to, from, next) => {

@@ -1,9 +1,15 @@
 <template>
-    <div class="home">
+    <div class="home container">
         BEM VINDO {{ usuario }}
         <br />
+        <button class="btn btn-primary">XXX</button>
         {{ $session.get("dadosUsuario") }}
-        <H1>HOME</H1>
+        <h1 class="text-primary">primary</h1>
+        <h1 class="text-secondary">secondary</h1>
+        <h1 class="text-success">success</h1>
+        <h1 class="text-danger">danger</h1>
+        <h1 class="text-warning">warning</h1>
+        <h1 class="text-info">info</h1>
     </div>
 </template>
 

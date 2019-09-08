@@ -18,7 +18,8 @@
       "id": 1,
       "nome": "Filipe Dru",
       "email": "filipe.dp@outlook.com",
-      "senha": "1234"
+      "senha": "1234",
+      "tema": "new-vapor"
     },
     {
       "id": 2,
