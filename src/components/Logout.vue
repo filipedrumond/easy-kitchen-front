@@ -10,6 +10,7 @@ export default {
     },
     created: function() {
         this.$session.destroy();
+        $("#app").removeClass();
         this.$router.push({ path: "home" });
     }
 };

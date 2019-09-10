@@ -59,6 +59,10 @@ export default {
                         return;
                     }
                     this.$session.set("dadosUsuario", response.body[0]);
+                    console.log(response.body[0]);
+                    if(response.body[0].tema){
+                        $("#app").addClass(response.body[0].tema);
+                    }
                     this.$router.push({ path: "/" });
                 },
                 response => {

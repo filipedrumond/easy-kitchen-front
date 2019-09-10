@@ -4,7 +4,7 @@
     </div>
 </template>
 
-<script>
+<script>  
 export default {
     name: "App",
     data() {
@@ -13,7 +13,9 @@ export default {
         };
     },
     created: function() {
-        this.tema = this.$session.get("dadosUsuario").tema || "default";
+        if(this.$session.exists()){
+            this.tema = this.$session.get("dadosUsuario").tema || "default";
+        }
     }
 };
 </script>

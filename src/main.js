@@ -6,6 +6,8 @@ import { SimpleConfirms } from "@filipedp/simple_dialog";
 import VueSession from 'vue-session'
 import router from './router'
 import App from './App'
+var $ = require('jquery');
+window.$ = $;
 
 Vue.use(VueSession);
 Vue.use(VueResource);
