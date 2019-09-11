@@ -25,6 +25,11 @@ Vue.mixin({
         }
     },
     methods: {
+        logout: function(){
+            this.$session.destroy();
+            $("#app").removeClass();
+            this.$router.push({ path: "home" });
+        }
     }
 });
 new Vue({

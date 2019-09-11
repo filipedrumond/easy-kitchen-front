@@ -1,8 +1,9 @@
 <template>
     <div class="home container">
+        <button class="btn btn-primary">XXX</button>
+        <button class="btn btn-danger" @click="logout()">Logout</button>
         BEM VINDO {{ usuario }}
         <br />
-        <button class="btn btn-primary">XXX</button>
         {{ $session.get("dadosUsuario") }}
         <h1 class="text-primary">primary</h1>
         <h1 class="text-secondary">secondary</h1>

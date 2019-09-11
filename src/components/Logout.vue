@@ -9,9 +9,7 @@ export default {
         return {};
     },
     created: function() {
-        this.$session.destroy();
-        $("#app").removeClass();
-        this.$router.push({ path: "home" });
+        this.logout();
     }
 };
 </script>
