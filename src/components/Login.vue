@@ -23,6 +23,12 @@
                 <button class="btn btn-block btn-success" @click="btnLogin()">
                     Entrar
                 </button>
+                <button
+                    class="btn btn-block btn-success"
+                    @click="$router.push({ path: '/signin' })"
+                >
+                    Me cadastrar
+                </button>
             </div>
         </div>
     </div>
@@ -40,33 +46,10 @@ export default {
     },
     methods: {
         btnLogin: function() {
-            let response = this.reqLogin(
+            let response = this.login(
                 this.emailInput,
                 this.senhaInput,
                 function() {}
-            );
-        },
-        reqLogin: function(usuario, senha) {
-            let url = `${this.db_url}usuarios?email=${usuario}&senha=${senha}`;
-            var VueXX = this;
-            this.$http.get(url).then(
-                response => {
-                    if (response.body.length !== 1) {
-                        this.SimpleAlerts.error({
-                            title: "Erro ao logar",
-                            text: "Usuario ou senha inválidos"
-                        });
-                        return;
-                    }
-                    this.$session.set("dadosUsuario", response.body[0]);
-                    if(response.body[0].tema){
-                        $("#app").addClass(response.body[0].tema);
-                    }
-                    this.$router.push({ path: "/" });
-                },
-                response => {
-                    this.SimpleAlerts.error({ title: "O BANCO MORREU" });
-                }
             );
         }
     },

@@ -13,6 +13,10 @@
       "postId": 1
     }
   ],
+  "temas": [
+    "new-vapor",
+    "neon"
+  ],
   "usuarios": [
     {
       "id": 1,
@@ -26,6 +30,20 @@
       "nome": "Breno ara",
       "email": "breno.dp@outlook.com",
       "senha": "4321"
+    },
+    {
+      "nome": "FILIPE TESTE",
+      "email": "fild.p123@gmail.com",
+      "senha": "123",
+      "tema": "new-vapor",
+      "id": 3
+    },
+    {
+      "nome": "FILIPE TESTE",
+      "email": "fild.p123@gmail.com",
+      "senha": "123",
+      "tema": "new-vapor",
+      "id": 4
     }
   ]
 }

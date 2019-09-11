@@ -4,6 +4,7 @@ import Login from '../components/Login'
 import Logout from '../components/Logout'
 import Home from '../components/Home'
 import ThemeTest from '../components/ThemeTest'
+import SignIn from '../components/SignIn'
 Vue.use(Router);
 const router = new Router({
     // linkActiveClass: '-active',
@@ -32,6 +33,12 @@ const router = new Router({
             alias: ['/theme-test', '/themeTest', '/themetest', "/theme"],
             component: ThemeTest,
         },
+        {
+            path: '/signin',
+            name: 'signin',
+            alias: ['/signin', '/SignIn', '/cadastrar', '/mecadastrar'],
+            component: SignIn
+        }
     ],
 });
 router.beforeEach((to, from, next) => {
