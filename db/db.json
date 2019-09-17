@@ -1,18 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
   "temas": [
     "new-vapor",
     "neon"
@@ -32,17 +18,17 @@
       "senha": "4321"
     },
     {
-      "nome": "FILIPE TESTE",
+      "nome": "321",
       "email": "fild.p123@gmail.com",
-      "senha": "123",
+      "senha": "1234",
       "tema": "new-vapor",
       "id": 3
     },
     {
-      "nome": "FILIPE TESTE",
-      "email": "fild.p123@gmail.com",
-      "senha": "123",
-      "tema": "new-vapor",
+      "nome": "",
+      "email": "",
+      "senha": "",
+      "tema": "",
       "id": 4
     }
   ]

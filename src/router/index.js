@@ -30,13 +30,13 @@ const router = new Router({
         {
             path: '/theme-test',
             name: 'theme-test',
-            alias: ['/theme-test', '/themeTest', '/themetest', "/theme"],
+            alias: ['/themeTest', '/themetest', "/theme"],
             component: ThemeTest,
         },
         {
             path: '/signin',
             name: 'signin',
-            alias: ['/signin', '/SignIn', '/cadastrar', '/mecadastrar'],
+            alias: ['/SignIn', '/cadastrar', '/mecadastrar'],
             component: SignIn
         }
     ],

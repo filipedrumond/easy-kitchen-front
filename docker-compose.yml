@@ -6,7 +6,7 @@ services:
           dockerfile: Dockerfile
       container_name: easy_kitchen_front
       ports:
-          - "8075:80"
+          - "8085:80"
       volumes:
           - .:/var/www/
           #- ./server/apache2/sites-available/000-default.conf:/etc/apache2/sites-available/000-default.conf

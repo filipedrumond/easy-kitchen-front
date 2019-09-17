@@ -12,6 +12,7 @@
                 id="email"
                 type="email"
                 v-model="emailInput"
+                @blur="validarEmail()"
             />
         </div>
         <!-- <div class="form-group">
@@ -30,6 +31,7 @@
                 id="senha"
                 type="text"
                 v-model="senhaInput"
+
             />
         </div>
         <!-- <div class="form-group">
@@ -62,7 +64,7 @@
                 </option>
             </select>
         </div>
-        <button class="btn btn-success" @click="cadastrar()">Cadastrar</button>
+        <button class="btn btn-success btn-cadastrar" @click="cadastrar()">Cadastrar</button>
     </div>
 </template>
 
@@ -107,6 +109,26 @@ export default {
         }
     },
     methods: {
+        validarEmail:function(params) {
+            let url = `${this.db_url}usuarios?email=${this.emailInput}`;
+            this.$http.get(url).then(
+                response => {
+                    if (response.body.length > 0) {
+                        this.SimpleAlerts.error({
+                            title: "Email em uso.",
+                            text: "Tente um email diferente este já está em uso."
+                        });
+                        $(".btn-cadastrar").attr("disabled", true);
+                        return;
+                    }
+                    $(".btn-cadastrar").attr("disabled", false);
+                },
+                response => {
+                    this.SimpleAlerts.error({ title: "O BANCO MORREU" });
+                }
+            );
+            console.log("HERE");
+        },
         cadastrar: function() {
             let url = `${this.db_url}usuarios`;
             let data = {
