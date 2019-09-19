@@ -7,6 +7,7 @@ import ThemeTest from '../components/ThemeTest'
 import SignIn from '../components/SignIn'
 import Base from '../components/Base'
 import CadMenu from '../components/CadMenu'
+import Cardapio from '../components/Cardapio'
 Vue.use(Router);
 const router = new Router({
     // linkActiveClass: '-active',
@@ -51,6 +52,11 @@ const router = new Router({
             path: '/base',
             name: 'base',
             component: Base
+        },
+        {
+            path: '/restaurante',
+            name: 'Restaurante',
+            component: Cardapio
         }
     ],
 });
