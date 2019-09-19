@@ -25,6 +25,9 @@ Vue.mixin({
         }
     },
     methods: {
+        setTitle: function (title) {
+            document.title = title;
+        },
         logout: function () {
             this.$session.destroy();
             $("#app").removeClass();

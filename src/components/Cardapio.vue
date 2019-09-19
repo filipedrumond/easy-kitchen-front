@@ -43,6 +43,11 @@ export default {
         this.handlerReqRestaurante(this.idRestaurante);
     },
     computed: {},
+    watch: {
+        restaurante: function(val) {
+            this.setTitle(val);
+        }
+    },
     methods: {
         handlerReqRestaurante: function(param) {
             isNaN(parseFloat(param))
@@ -53,7 +58,6 @@ export default {
             let url = `${this.db_url}restaurantes?nome=${nome}`;
             this.$http.get(url).then(
                 response => {
-                    console.log(response.body);
                     if (response.body.length != 1) {
                         this.SimpleAlerts.error({
                             title: "ERRO AO BUSCAR RESTAURANTE",
