@@ -58,9 +58,9 @@
   ],
   "restaurantes": [
     {
-      "restaurante": "Esse Restaurante mesmo",
-      "email":"restaurante@gmail.com",
-      "senha":"1234",
+      "nome": "teste",
+      "email": "restaurante@gmail.com",
+      "senha": "1234",
       "id": 1,
       "cardapio": [
         {

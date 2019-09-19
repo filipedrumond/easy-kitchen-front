@@ -56,9 +56,10 @@ const router = new Router({
             component: Base
         },
         {
-            path: '/restaurante',
+            path: '/restaurante/:idRestaurante',
             name: 'Restaurante',
-            component: Cardapio
+            component: Cardapio,
+            meta: { title: "Restaurante" }
         }
     ],
 });
@@ -76,6 +77,7 @@ router.beforeEach((to, from, next) => {
         next("/");
         return;
     }
+    document.title = to.meta.title || "Easy Kitchen"
     next();
     return;
 })

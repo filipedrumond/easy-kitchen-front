@@ -39,18 +39,47 @@ export default {
     },
     beforeCreate: function() {},
     created: function() {
-        this.idRestaurante = this.$route.query.resturante || 1;
-        this.retauranteGet(this.idRestaurante);
+        this.idRestaurante = this.$route.params.idRestaurante;
+        this.handlerReqRestaurante(this.idRestaurante);
     },
     computed: {},
     methods: {
-        retauranteGet: function(id) {
+        handlerReqRestaurante: function(param) {
+            isNaN(parseFloat(param))
+                ? this.restauranteGetByNome(param)
+                : this.retauranteGetById(param);
+        },
+        restauranteGetByNome: function(nome) {
+            let url = `${this.db_url}restaurantes?nome=${nome}`;
+            this.$http.get(url).then(
+                response => {
+                    console.log(response.body);
+                    if (response.body.length != 1) {
+                        this.SimpleAlerts.error({
+                            title: "ERRO AO BUSCAR RESTAURANTE",
+                            closeCallback: () => {
+                                this.$router.push({ path: "/" });
+                            }
+                        });
+                        return;
+                    }
+                    console.log(response.body);
+                    this.cardapio = response.body[0].cardapio;
+                    this.restaurante = response.body[0].nome;
+                    this.dataRequest = response.body[0];
+                },
+                response => {
+                    this.SimpleAlerts.error({ title: "O BANCO MORREU" });
+                }
+            );
+        },
+        retauranteGetById: function(id) {
             let url = `${this.db_url}restaurantes/${id}`;
             this.$http.get(url).then(
                 response => {
                     console.log(response.body);
                     this.cardapio = response.body.cardapio;
-                    this.restaurante = response.body.restaurante;
+                    this.restaurante = response.body.nome;
                     this.dataRequest = response.body;
                 },
                 response => {
