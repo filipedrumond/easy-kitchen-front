@@ -5,6 +5,8 @@ import Logout from '../components/Logout'
 import Home from '../components/Home'
 import ThemeTest from '../components/ThemeTest'
 import SignIn from '../components/SignIn'
+import Base from '../components/Base'
+import CadMenu from '../components/CadMenu'
 Vue.use(Router);
 const router = new Router({
     // linkActiveClass: '-active',
@@ -35,9 +37,20 @@ const router = new Router({
         },
         {
             path: '/signin',
-            name: 'signin',
+            name: 'Cadastrar',
             alias: ['/SignIn', '/cadastrar', '/mecadastrar'],
             component: SignIn
+        },
+        {
+            path: '/cad_menu',
+            name: 'Cadastro Menu',
+            alias: ['/cadastro_menu', '/CadMenu', "/CadastroMenu"],
+            component: CadMenu
+        },
+        {
+            path: '/base',
+            name: 'base',
+            component: Base
         }
     ],
 });
