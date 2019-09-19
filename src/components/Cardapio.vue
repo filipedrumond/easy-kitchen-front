@@ -1,6 +1,25 @@
 <template>
     <div class="restaurante container">
         <h2>{{ restaurante }} ID: {{ idRestaurante }}</h2>
+        <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+        </label>
+
+        <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span> </label
+        ><br /><br />
+
+        <label class="switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+        </label>
+
+        <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+        </label>
         <div class="row" v-for="item in cardapio" v-bind:key="item.id">
             <div class="col-2">
                 {{ item.nome }}
