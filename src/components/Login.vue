@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-3">
+            <div class="col-md-3 col-12">
                 <div class="form-group">
                     <label class="" for="email">Email</label>
                     <input

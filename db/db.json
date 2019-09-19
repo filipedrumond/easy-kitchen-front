@@ -15,9 +15,10 @@
     {
       "id": 2,
       "nome": "Breno ara",
-      "email": "breno.dp@outlook.com",
-      "senha": "4321",
-      "tipo": 2
+      "email": "breno@outlook.com",
+      "senha": "1234",
+      "tipo": 2,
+      "tema": "neon"
     },
     {
       "id": 3,
@@ -32,6 +33,13 @@
       "senha": "",
       "tema": "",
       "id": 4
+    },
+    {
+      "nome": "Farabel",
+      "email": "farabel",
+      "senha": "qwert",
+      "tema": "neon",
+      "id": 5
     }
   ],
   "base": [
@@ -101,6 +109,31 @@
             ""
           ],
           "id": 3
+        },
+        {
+          "nome": "Minha irmã",
+          "valor": 5,
+          "ingredientes": [
+            "6",
+            "9"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 4
+        },
+        {
+          "nome": "Breno é gey",
+          "valor": 24,
+          "ingredientes": [
+            "arco iris"
+          ],
+          "imgs": [
+            "",
+            ""
+          ],
+          "id": 5
         }
       ]
     }

@@ -21,13 +21,13 @@
             <span class="slider round"></span>
         </label>
         <div class="row" v-for="item in cardapio" v-bind:key="item.id">
-            <div class="col-2">
+            <div class="col-md-2 col-3">
                 {{ item.nome }}
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-3">
                 {{ item.valor }}
             </div>
-            <div class="col-2">
+            <div class="col-md-2 col-3">
                 <span
                     v-for="ingrediente in item.ingredientes"
                     v-bind:key="ingrediente.id"
@@ -35,7 +35,7 @@
                     {{ ingrediente }},
                 </span>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-3">
                 <img
                     :src="'data:image/png;base64,' + item.imgs[0]"
                     alt="Imagem do prato"

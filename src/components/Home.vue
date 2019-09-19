@@ -2,6 +2,12 @@
     <div class="home container">
         <button class="btn btn-primary">XXX</button>
         <button class="btn btn-danger" @click="logout()">Logout</button>
+        <button
+            class="btn btn-primary"
+            @click="$router.push({ path: 'restaurante/teste' })"
+        >
+            restaurante
+        </button>
         BEM VINDO {{ usuario }}
         <br />
         {{ $session.get("dadosUsuario") }}
