@@ -1,11 +1,13 @@
+import ThemeTest from '../components/helpers/ThemeTest'
+import Base from '../components/helpers/Base'
+
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Login from '../components/Login'
 import Logout from '../components/Logout'
 import Home from '../components/Home'
-import ThemeTest from '../components/ThemeTest'
 import SignIn from '../components/SignIn'
-import Base from '../components/Base'
 import CadMenu from '../components/CadMenu'
 import Cardapio from '../components/Cardapio'
 Vue.use(Router);
